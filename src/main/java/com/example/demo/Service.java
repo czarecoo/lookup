@@ -11,6 +11,7 @@ public class Service {
         prototype.doSomething();
     }
 
+    //cannot be private, static or final
     @Lookup
     Prototype createPrototype(int i) {
         throw new UnsupportedOperationException("Spring should override this lookup method");
