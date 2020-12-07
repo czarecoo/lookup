@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import com.example.demo.service.GreetService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -7,11 +8,11 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class DemoApplicationTests {
     @Autowired
-    Service service;
+    GreetService greetService;
 
     @Test
     void contextLoads() {
-        service.doSomething(1);
-        service.doSomething(5);
+        greetService.greet();
+        greetService.greet("Czareg");
     }
 }
